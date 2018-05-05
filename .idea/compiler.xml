@@ -2,6 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="addressbook-selenium-test_main" target="1.8" />
+      <module name="addressbook-selenium-test_test" target="1.8" />
+      <module name="addressbook_Home_main" target="1.8" />
+      <module name="addressbook_Home_test" target="1.8" />
+      <module name="addressbook_HW_main" target="1.8" />
+      <module name="addressbook_HW_test" target="1.8" />
+      <module name="HomeWork_main" target="1.8" />
+      <module name="HomeWork_test" target="1.8" />
       <module name="SampleTest_main" target="1.8" />
       <module name="SampleTest_test" target="1.8" />
     </bytecodeTargetLevel>

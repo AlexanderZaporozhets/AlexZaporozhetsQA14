@@ -32,7 +32,8 @@ public class Addressbook {
     driver.findElement(By.name("pass")).sendKeys("secret");
     driver.findElement(By.xpath("//input[@value='Login']")).click();
     //Creating User in addressbook
-    driver.findElement(By.linkText("add new")).click();
+    goToAddNewContact();
+
     driver.findElement(By.name("firstname")).click();
     driver.findElement(By.name("firstname")).clear();
     driver.findElement(By.name("firstname")).sendKeys("Alex");
@@ -53,6 +54,10 @@ public class Addressbook {
     driver.findElement(By.name("byear")).clear();
     driver.findElement(By.name("byear")).sendKeys("1984");
     driver.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
+  }
+
+  public void goToAddNewContact() {
+    driver.findElement(By.linkText("add new")).click();
   }
 
   @AfterClass(alwaysRun = true)

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="addressbook_Home" external.linked.project.path="$MODULE_DIR$/../../addressbook_Home" external.root.project.path="$MODULE_DIR$/../../addressbook_Home" external.system.id="GRADLE" external.system.module.group="addressbook_HW_New" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../addressbook_Home">
+      <excludeFolder url="file://$MODULE_DIR$/../../addressbook_Home/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../addressbook_Home/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../addressbook_Home/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

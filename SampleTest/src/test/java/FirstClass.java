@@ -1,11 +1,18 @@
 package com.example.tests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
+
+import static org.openqa.selenium.Keys.*;
 
 public class FirstClass {
   private WebDriver driver;
@@ -22,7 +29,7 @@ public class FirstClass {
     driver.findElement(By.id("lst-ib")).click();
     driver.findElement(By.id("lst-ib")).clear();
     driver.findElement(By.id("lst-ib")).sendKeys("webDriver");
-    driver.findElement(By.id("lst-ib")).sendKeys(Keys.ENTER);
+    driver.findElement(By.id("lst-ib")).sendKeys(ENTER);
   }
 
   @AfterClass(alwaysRun = true)

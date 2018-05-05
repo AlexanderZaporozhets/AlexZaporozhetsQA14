@@ -26,8 +26,6 @@ public class TelRanTest {
     driver.findElement(By.id("lst-ib")).sendKeys("tel-ran");
     driver.findElement(By.id("lst-ib")).sendKeys(Keys.ENTER);
     driver.findElement(By.linkText("Тель-Ран")).click();
-    driver.findElement(By.xpath("//div[@id='content']/div[2]/p[2]/span/em/span/strong/a/span/span")).click();
-    // ERROR: Caught exception [ERROR: Unsupported command [selectWindow | win_ser_1 | ]]
   }
 
   @AfterClass(alwaysRun = true)
