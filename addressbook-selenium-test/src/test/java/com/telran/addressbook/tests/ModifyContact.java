@@ -1,3 +1,5 @@
+package com.telran.addressbook.tests;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -6,7 +8,7 @@ public class ModifyContact extends TestBase {
     public void contactModificationTests() {
         int before = app.getContactCount();
         app.initModifyContact();
-        app.submitContactModification();
+        app.getGroupHelper().submitContactModification();
         int after = app.getContactCount();
         Assert.assertEquals(after, before);
     }

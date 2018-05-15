@@ -1,4 +1,5 @@
-import org.testng.Assert;
+package com.telran.addressbook.tests;
+
 import org.testng.annotations.Test;
 
 public class CreateUserTest extends TestBase {
