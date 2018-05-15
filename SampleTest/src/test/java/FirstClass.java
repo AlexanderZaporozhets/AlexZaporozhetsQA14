@@ -1,9 +1,5 @@
-package com.example.tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -23,13 +19,20 @@ public class FirstClass {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test
+  @Test(enabled = false)
   public void searchWebDriverInChrome() throws Exception {
     driver.get("https://www.google.com/");
     driver.findElement(By.id("lst-ib")).click();
     driver.findElement(By.id("lst-ib")).clear();
     driver.findElement(By.id("lst-ib")).sendKeys("webDriver");
     driver.findElement(By.id("lst-ib")).sendKeys(ENTER);
+  }
+  @Test
+  public void elementsTest(){
+    driver.get("https://www.google.com/");
+    WebElement settings = driver.findElement(By.id("fsettl"));
+    settings.click();
+    driver.navigate().refresh();
   }
 
   @AfterClass(alwaysRun = true)
