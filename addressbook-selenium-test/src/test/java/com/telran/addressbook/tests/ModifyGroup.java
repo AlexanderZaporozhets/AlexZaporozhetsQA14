@@ -7,7 +7,10 @@ import org.testng.annotations.Test;
 public class ModifyGroup extends TestBase {
     @Test
     public void groupModificationTests(){
-        app.goToGroupsPage();
+        app.getNavigationHelper().goToGroupsPage();
+        if( ! app.getGroupHelper().isThereAGroup()){
+            app.getGroupHelper().createGroup();
+        }
         int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().selectGroup();
         app.getGroupHelper().initModifyGroup();

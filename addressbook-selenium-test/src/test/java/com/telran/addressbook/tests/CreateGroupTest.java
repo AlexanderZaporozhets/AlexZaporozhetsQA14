@@ -1,6 +1,7 @@
 package com.telran.addressbook.tests;
 
 import com.telran.addressbook.model.GroupData;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -8,11 +9,11 @@ public class CreateGroupTest extends TestBase {
 
     @Test(priority = 2)
     public void testCreateGroupLongName() throws Exception {
-        app.goToGroupsPage();
+        app.getNavigationHelper().goToGroupsPage();
         int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().initGroupCreation();
         app.getGroupHelper().fillGroupForm(new GroupData("header", "footer", "name"));
-        app.getGroupHelper().submitGroupCreation();
+        app.getGroupHelper().submitGroupCreation(By.name("submit"));
         app.getGroupHelper().returnToGroupPage();
         int after = app.getGroupHelper().getGroupCount();
         //System.out.println("testCreateGroupLongName() passed");
@@ -20,11 +21,11 @@ public class CreateGroupTest extends TestBase {
     }
     @Test(priority = 1)
     public void testCreateGroupShortName() throws Exception {
-        app.goToGroupsPage();
+        app.getNavigationHelper().goToGroupsPage();
         int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().initGroupCreation();
         app.getGroupHelper().fillGroupForm(new GroupData("h", "f", "n"));
-        app.getGroupHelper().submitGroupCreation();
+        app.getGroupHelper().submitGroupCreation(By.name("submit"));
         app.getGroupHelper().returnToGroupPage();
         int after = app.getGroupHelper().getGroupCount();
         //System.out.println("testCreateGroupShortName() passed");
@@ -32,11 +33,11 @@ public class CreateGroupTest extends TestBase {
     }
     @Test(priority = 3)
     public void testCreateGroupEmpty() throws Exception {
-        app.goToGroupsPage();
+        app.getNavigationHelper().goToGroupsPage();
         int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().initGroupCreation();
         app.getGroupHelper().fillGroupForm(new GroupData("", "", ""));
-        app.getGroupHelper().submitGroupCreation();
+        app.getGroupHelper().submitGroupCreation(By.name("submit"));
         app.getGroupHelper().returnToGroupPage();
         int after = app.getGroupHelper().getGroupCount();
         //System.out.println("testCreateGroupEmpty() passed");

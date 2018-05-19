@@ -6,10 +6,10 @@ import org.testng.annotations.Test;
 public class ModifyContact extends TestBase {
     @Test
     public void contactModificationTests() {
-        int before = app.getContactCount();
-        app.initModifyContact();
+        int before = app.getContactHelper().getContactCount();
+        app.getContactHelper().initModifyContact();
         app.getGroupHelper().submitContactModification();
-        int after = app.getContactCount();
+        int after = app.getContactHelper().getContactCount();
         Assert.assertEquals(after, before);
     }
 
