@@ -14,7 +14,7 @@ public class ModifyGroup extends TestBase {
         int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().selectGroup();
         app.getGroupHelper().initModifyGroup();
-        app.getGroupHelper().fillGroupForm(new GroupData("1", "1", "1"));
+        app.getGroupHelper().fillGroupForm(new GroupData().withName("1").withFooter("1").withHeader("1"));
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToGroupPage();
         int after = app.getGroupHelper().getGroupCount();

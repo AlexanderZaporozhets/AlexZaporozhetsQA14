@@ -3,6 +3,8 @@ package com.telran.addressbook.appManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
@@ -12,9 +14,19 @@ public class ApplicationManager {
     private WebDriver driver;
     private GroupHelper groupHelper;
     private NavigationHelper navigationHelper;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public void start() {
-        driver = new ChromeDriver();
+        if(browser.equals(BrowserType.FIREFOX)){
+        }else if(browser.equals(BrowserType.CHROME)){
+            driver = new ChromeDriver();
+        }else if(browser.equals(BrowserType.IE)){
+            driver = new InternetExplorerDriver();
+        }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         navigationHelper = new NavigationHelper(driver);
         groupHelper = new GroupHelper(driver);

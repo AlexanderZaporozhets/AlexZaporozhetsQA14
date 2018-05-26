@@ -1,21 +1,18 @@
 package com.telran.addressbook.tests;
 
+import com.telran.addressbook.model.ContactData;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class CreateUserTest extends TestBase {
 
     @Test
     public void testCreateNewContact() throws Exception {
+        int before = app.getContactHelper().getContactCount();
         app.getContactHelper().goToAddNewContact();
-        app.getContactHelper().addContactInformation("Alex", "Zaporozhets", "RishonLezion", "0586906455", "a.zaporozhets@mail.ru", "13", "July","1984");
-        app.getContactHelper().submitContactCreation();
-        app.getContactHelper().goToAddNewContact();
-        app.getContactHelper().addContactInformation("Elena", "Zaporozhets", "RishonLezion", "0586906456", "e.zaporozhets@mail.ru", "16", "March","1985");
-        app.getContactHelper().submitContactCreation();
-        app.getContactHelper().goToAddNewContact();
-        app.getContactHelper().addContactInformation("Mariya", "Zaporozhets", "RishonLezion", "0586906457", "m.zaporozhets@mail.ru", "2", "April","2010");
-        app.getContactHelper().submitContactCreation();
-        app.getNavigationHelper().returnToHomePage();
-
+        app.getContactHelper().addContactInformation(new ContactData().whisFirstname("Alex").whisLastname("Zaporozhets").whisAddress("RishonLezion").whisMobile("0586906455").whisEmail("a.zaporozhets@mail.ru").whisBday("13").whisBmonth("July").whisByear("1984"));
+        app.getContactHelper().submitContactCreation(By.xpath("(//input[@name='submit'])[2]"));
+        int after = app.getContactHelper().getContactCount();
+        org.testng.Assert.assertEquals(after, before+1);
     }
 }
