@@ -1,4 +1,4 @@
-package com.telran.addressbook.model;
+package model;
 
 public class GroupData {
     private String header;
@@ -30,14 +30,5 @@ public class GroupData {
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public String toString() {
-        return "GroupData{" +
-                "header='" + header + '\'' +
-                ", footer='" + footer + '\'' +
-                ", name='" + name + '\'' +
-                '}';
     }
 }

@@ -1,4 +1,4 @@
-package com.telran.addressbook.model;
+package model;
 
 import java.io.File;
 
@@ -95,21 +95,5 @@ public class ContactData {
 
     public String getByear() {
         return byear;
-    }
-
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", address='" + address + '\'' +
-                ", mobile='" + mobile + '\'' +
-                ", email='" + email + '\'' +
-                ", bday='" + bday + '\'' +
-                ", bmonth='" + bmonth + '\'' +
-                ", byear='" + byear + '\'' +
-                ", photo=" + photo +
-                ", group='" + group + '\'' +
-                '}';
     }
 }

@@ -1,4 +1,4 @@
-package com.telran.addressbook.appManager;
+package appManager;
 
 import com.telran.addressbook.model.ContactData;
 import org.openqa.selenium.By;
