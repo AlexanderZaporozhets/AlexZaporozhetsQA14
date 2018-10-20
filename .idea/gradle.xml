@@ -14,10 +14,30 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/PlayOJOTest" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/PlayOJOTest" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/SampleTest" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/SampleTest" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/TestOjo_1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/TestOjo_1" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

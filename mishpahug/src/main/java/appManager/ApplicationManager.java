@@ -43,9 +43,7 @@ public class ApplicationManager {
         driver.findElement(By.xpath("//input[@value='Login']")).click();
     }
 
-    public void openSite(String url) {
-        driver.get(url);
-    }
+
 
     public void stop() {
         driver.quit();
@@ -54,7 +52,9 @@ public class ApplicationManager {
     public GroupHelper getGroupHelper() {
         return groupHelper;
     }
-
+    public void openSite(String url) {
+        driver.get(url);
+    }
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }

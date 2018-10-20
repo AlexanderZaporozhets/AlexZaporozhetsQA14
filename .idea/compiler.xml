@@ -12,8 +12,12 @@
       <module name="HomeWork_test" target="1.8" />
       <module name="mishpahug_main" target="1.8" />
       <module name="mishpahug_test" target="1.8" />
+      <module name="PlayOJOTest_main" target="1.8" />
+      <module name="PlayOJOTest_test" target="1.8" />
       <module name="SampleTest_main" target="1.8" />
       <module name="SampleTest_test" target="1.8" />
+      <module name="TestOjo_1_main" target="1.8" />
+      <module name="TestOjo_1_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

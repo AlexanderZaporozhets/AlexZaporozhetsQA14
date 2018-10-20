@@ -108,7 +108,7 @@ public class ContactData {
                 ", bday='" + bday + '\'' +
                 ", bmonth='" + bmonth + '\'' +
                 ", byear='" + byear + '\'' +
-                ", photo=" + photo +
+                //", photo=" + photo +
                 ", group='" + group + '\'' +
                 '}';
     }

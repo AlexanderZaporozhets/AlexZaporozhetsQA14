@@ -31,8 +31,8 @@ public class CreateUserTest extends TestBase {
     public void testCreateNewContact(ContactData contact) throws Exception {
         int before = app.getContactHelper().getContactCount();
         app.getContactHelper().goToAddNewContact();
-        File photo = new File("src/test/resources/1.jpg");
-        app.getContactHelper().addContactInformation(new ContactData().whisFirstname(contact.getFirstname()).whisLastname(contact.getLastname()).whisAddress(contact.getAddress()).whisMobile(contact.getMobile()).whisEmail(contact.getEmail()).whisBday(contact.getBday()).whisBmonth(contact.getBmonth()).whisByear(contact.getByear()).whisPhoto(contact.getPhoto()).whisGroup(contact.getGroup()));
+        //File photo = new File("src/test/resources/1.jpg");
+        app.getContactHelper().addContactInformation(new ContactData().whisFirstname(contact.getFirstname()).whisLastname(contact.getLastname()).whisAddress(contact.getAddress()).whisMobile(contact.getMobile()).whisEmail(contact.getEmail()).whisBday(contact.getBday()).whisBmonth(contact.getBmonth()).whisByear(contact.getByear()).whisGroup(contact.getGroup()));
         app.getContactHelper().submitContactCreation(By.xpath("(//input[@name='submit'])[2]"));
         int after = app.getContactHelper().getContactCount();
         org.testng.Assert.assertEquals(after, before+1);
